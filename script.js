@@ -44,3 +44,20 @@ function desencriptar(stringDesencriptada) {
 
     return stringDesencriptada;
 }
+
+function copiarTexto() {
+    const textoArea = document.querySelector('.mensagem');
+
+    // Verifica se o elemento foi encontrado
+    if (textoArea) {
+        textoArea.select();
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert('Texto copiado para a área de transferência!');
+    } else {
+        console.error('Elemento não encontrado!');
+    }
+}
+
+
+
